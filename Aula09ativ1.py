@@ -81,8 +81,44 @@ for nome, preco in produtos:
     print(f"{nome:.<20} R$ {preco:6.2f}")
 
 
+produtos = (
+    ("Arroz", 5.99, 10),
+    ("Feijão", 7.49, 3),
+    ("Leite", 4.89, 5),
+    ("Óleo", 9.99, 2),
+    ("Açúcar", 3.29, 5)
+)
+total_geral = 0
+print("LISTA DE PRODUTOS")
+for nome, preco, qt in produtos:  
+    total = preco*qt
+    total_geral = total_geral+total
+    print(f"{nome:.<20} - R$ {preco:6.2f} x {qt:03} = R$ {total:6.2f}")
+total_desconto = total_geral*0.9
+print(f"\n\tvalor da compra : R$ {total_geral:8.2f}")
+print(f"\t        desconto : - 10% ")
+print(f"\tValor      final  : R$  {total_desconto:8.2f}")
 
-#123
+
+
+import random
+qt_elementos = 100
+lista=[]
+for i in range(qt_elementos):
+  lista.append(random.randint(1, 999))
+media=sum(lista)/len(lista)
+print(f"A media dos valores é: {media:.2f}")
+maiores=[]
+menores=[]
+for valor in lista:
+  if valor > media:
+    maiores.append(valor)
+    #print(f"....{valor}...)
+  elif valor < media:
+    menores.append(valor)
+print(f"{maiores}")
+print(f"{menores}")
+
 
 
 
